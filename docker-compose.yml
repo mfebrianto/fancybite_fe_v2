@@ -1,0 +1,5 @@
+app:
+  image: mfebrianto/fancybite_fe:latest
+  command: nginx
+  ports:
+    - "80:80"
