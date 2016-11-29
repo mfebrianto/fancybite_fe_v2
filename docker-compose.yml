@@ -1,5 +1,5 @@
 app:
-  image: mfebrianto/fancybite_fe:latest
+  image: "mfebrianto/fancybite_fe:${FANCYBITE_FE_DOCKER_TAG}"
   command: nginx
   ports:
     - "80:80"
