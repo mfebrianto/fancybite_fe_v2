@@ -1,14 +1,15 @@
 import { Col } from 'react-bootstrap';
 import React, { Component } from 'react';
 
-import registrationForm from '../components/forms/RegistrationForm'
+import RegistrationForm from '../components/forms/RegistrationForm'
+import TopBarMenu from '../components/commons/TopBarMenu'
 
 class RegistrationPage extends Component {
   render() {
     return (
       <div>
-        <h1>Registration</h1>
-        <registrationForm/>
+        <TopBarMenu/>
+        <RegistrationForm/>
       </div>
     );
   }
