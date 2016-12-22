@@ -11,13 +11,13 @@ class TopBarMenu extends React.Component {
           <Navbar.Toggle className='fb-navbar-toggle'/>
         </Navbar.Header>
         <Navbar.Collapse>
-          <Nav>
-            <NavItem eventKey={1} href="#">Link</NavItem>
-            <NavItem eventKey={2} href="#">Link</NavItem>
+          <Nav className='fb-navbar-left'>
+            <NavItem eventKey={1} href="#">Menu</NavItem>
+            <NavItem eventKey={2} href="#" className='fb-nav-item-innder-left'>Download</NavItem>
           </Nav>
-          <Nav pullRight>
-            <NavItem eventKey={1} href="#">Link Right</NavItem>
-            <NavItem eventKey={2} href="#">Link Right</NavItem>
+          <Nav pullRight className='fb-navbar-right'>
+            <NavItem eventKey={1} href="#" className='fb-nav-item-innder-right'>Special</NavItem>
+            <NavItem eventKey={2} href="#">Contact</NavItem>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

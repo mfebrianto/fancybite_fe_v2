@@ -17,6 +17,7 @@
   width: 80px;
   left: 50%;
   margin-left: -40px;
+  z-index: 1000;
 
   top:7px
 }
@@ -25,5 +26,25 @@
 
 
 @media only screen and (min-width : 768px) {
+  .fb-navbar-right{
+    margin-right: 15%;
+  }
+  .fb-navbar-left{
+    margin-left: 15%;
+  }
+  .fb-nav-item-innder-left{
+    margin-left: 40px;
+  }
+  .fb-nav-item-innder-right{
+    margin-right: 40px;
+  }
+}
 
+@media only screen and (max-width : 767px) {
+  .fb-navbar-right{
+    margin-top: 0px;
+  }
+  .fb-navbar-left{
+    margin-bottom: 0px;
+  }
 }
