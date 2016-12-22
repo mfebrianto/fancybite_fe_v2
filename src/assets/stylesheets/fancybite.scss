@@ -1,0 +1,24 @@
+.fb-navbar {
+  background-color: white;
+}
+
+.navbar-header {
+  float: left;
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+.navbar-logo {
+  background: url('../../assets/images/logo.png');
+  background-repeat: no-repeat;
+  -webkit-background-size: auto 100%;
+  -moz-background-size: auto 100%;
+  -o-background-size: auto 100%;
+  background-size: auto 100%;
+  background-position: center;
+  width: auto;
+  left: 50%;
+}
+
+.navbar-brand {float:none;}

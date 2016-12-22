@@ -121,6 +121,10 @@ module.exports = {
         loader: 'style!css?importLoaders=1!postcss'
       },
       {
+        test: /\.scss$/,
+        loaders: ['style', 'css', 'sass']
+      },
+      {
         test: /\.yml$/,
         loader: 'json-loader!yaml-include-loader',
       },

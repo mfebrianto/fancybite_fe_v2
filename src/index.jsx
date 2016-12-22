@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import './assets/stylesheets/bootstrap.min.css'
 import './index.css';
+import './assets/stylesheets/fancybite.scss'
 
 import { Provider } from 'react-redux';
 import store from './store';
