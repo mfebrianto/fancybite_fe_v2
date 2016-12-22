@@ -5,12 +5,21 @@ class TopBarMenu extends React.Component {
 
   render(){
     return (
-      <Navbar className='fb-navbar'>
+      <Navbar collapseOnSelect className='fb-navbar'>
+        <div className='fb-navbar-logo'/>
         <Navbar.Header>
-          <Navbar.Brand>
-            <div className='navbar-logo'/>
-          </Navbar.Brand>
+          <Navbar.Toggle className='fb-navbar-toggle'/>
         </Navbar.Header>
+        <Navbar.Collapse>
+          <Nav>
+            <NavItem eventKey={1} href="#">Link</NavItem>
+            <NavItem eventKey={2} href="#">Link</NavItem>
+          </Nav>
+          <Nav pullRight>
+            <NavItem eventKey={1} href="#">Link Right</NavItem>
+            <NavItem eventKey={2} href="#">Link Right</NavItem>
+          </Nav>
+        </Navbar.Collapse>
       </Navbar>
     )
   }
