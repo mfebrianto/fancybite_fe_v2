@@ -1,8 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Advent+Pro');
+
 /*
  * overwrite bootstrap
  */
 .navbar {
   border-bottom: none;
+  font-family: 'Advent Pro', sans-serif;
+}
+
+.navbar-default {
+  .navbar-nav>li>a{
+    color: mediumturquoise;
+    background-color: transparent;
+  }
+
+  .navbar-nav>li>a:focus {
+    color: lightpink;
+    background-color: transparent;
+  }
+
+  .navbar-nav>li>a:hover {
+    color: lightpink;
+    background-color: transparent;
+  }
 }
 
 .wave-border {
