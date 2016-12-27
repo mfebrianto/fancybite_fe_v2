@@ -5,10 +5,54 @@
  */
 .navbar {
   border-bottom: none;
-  font-family: 'Advent Pro', sans-serif;
 }
 
-.navbar-default {
+.sign-in-bar{
+
+  .label{
+    float: right;
+    a{
+      color: white;
+      font-size: 1.5em;
+      text-decoration: none;
+
+    }
+
+    a:hover{
+      color: mediumturquoise;
+      background-color: transparent;
+    }
+
+    a:focus{
+      color: mediumturquoise;
+      background-color: transparent;
+    }
+
+  }
+
+  a {
+    color: white;
+  }
+
+  .vertical-line{
+    background-color: mediumturquoise;
+  }
+
+  .shopping-cart{
+    float: right;
+    background: url('../../assets/images/shopping-cart-white.png');
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    height: 20px;
+    width: 20px;
+    margin-right: 25px;
+    margin-left: 20px;
+  }
+}
+
+.fb-navbar-wrapper {
+  font-family: 'Advent Pro', sans-serif;
+
   .navbar-nav>li>a{
     color: mediumturquoise;
     background-color: transparent;
@@ -37,6 +81,10 @@
   li>a:hover {
     color: lightpink;
     background-color: transparent;
+  }
+
+  li {
+    list-style: none;
   }
 }
 
@@ -107,9 +155,16 @@
   a {
     text-decoration: none;
   }
-  li {
-    list-style: none;
-  }
+}
+
+.sign-in-bar{
+  height: 30px;
+  background-color: pink;
+}
+
+.sign-in-bar-right{
+  float: right;
+  margin-top: 5px;
 }
 
 @media only screen and (min-width : 768px) {
@@ -137,5 +192,8 @@
   }
   .fb-navbar-left{
     margin-bottom: 0px;
+  }
+  .sign-in-bar{
+    display: none;
   }
 }

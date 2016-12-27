@@ -5,7 +5,14 @@ class TopBarMenu extends React.Component {
 
   render(){
     return (
-      <div>
+      <div className='fb-navbar-wrapper'>
+        <div className='sign-in-bar'>
+          <div className='sign-in-bar-right'>
+            <div className='shopping-cart'/>
+            <div className='vertical-line'/>
+            <NavItem href="#" className='label'>LOGIN</NavItem>
+          </div>
+        </div>
         <Navbar collapseOnSelect className='fb-navbar'>
           <div className='fb-navbar-logo'/>
           <Navbar.Header>
@@ -13,7 +20,7 @@ class TopBarMenu extends React.Component {
             <div className='sign-in-wrapper'>
               <div className='fb-shopping-cart'></div>
               <div className='vertical-line' />
-              <NavItem href="#" className='sign-in-url'>SIGN-IN</NavItem>
+              <NavItem href="#" className='sign-in-url'>LOGIN</NavItem>
             </div>
           </Navbar.Header>
           <Navbar.Collapse>
