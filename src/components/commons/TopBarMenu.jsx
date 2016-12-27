@@ -10,6 +10,11 @@ class TopBarMenu extends React.Component {
           <div className='fb-navbar-logo'/>
           <Navbar.Header>
             <Navbar.Toggle className='fb-navbar-toggle'/>
+            <div className='sign-in-wrapper'>
+              <div className='fb-shopping-cart'></div>
+              <div className='vertical-line' />
+              <NavItem href="#" className='sign-in-url'>SIGN-IN</NavItem>
+            </div>
           </Navbar.Header>
           <Navbar.Collapse>
             <Nav className='fb-navbar-left'>

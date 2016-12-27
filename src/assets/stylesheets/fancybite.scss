@@ -23,6 +23,32 @@
     color: lightpink;
     background-color: transparent;
   }
+
+  li>a{
+    color: mediumturquoise;
+    background-color: transparent;
+  }
+
+  li>a:focus {
+    color: lightpink;
+    background-color: transparent;
+  }
+
+  li>a:hover {
+    color: lightpink;
+    background-color: transparent;
+  }
+}
+
+.vertical-line{
+  width: 1px; /* Line width */
+  background-color: pink; /* Line color */
+  background-size: 100px 100px;
+  height: 20px; /* Override in-line if you want specific height. */
+  float: right; /* Causes the line to float to left of content.
+    You can instead use position:absolute or display:inline-block
+    if this fits better with your design */
+  margin-left: 10px;
 }
 
 .wave-border {
@@ -58,8 +84,33 @@
   top:7px
 }
 
+.fb-shopping-cart{
+  float: right;
+  background: url('../../assets/images/shopping-cart.png');
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  height: 20px;
+  width: 20px;
+  margin-right: 20px;
+  margin-left: 10px;
+}
+
 .navbar-brand {float:none;}
 
+.sign-in-url{
+  float: right;
+}
+
+.sign-in-wrapper {
+  margin-top: 17px;
+  float: right;
+  a {
+    text-decoration: none;
+  }
+  li {
+    list-style: none;
+  }
+}
 
 @media only screen and (min-width : 768px) {
   .fb-navbar-right{
@@ -74,8 +125,12 @@
   .fb-nav-item-innder-right{
     margin-right: 40px;
   }
+  .sign-in-wrapper{
+    display: none;
+  }
 }
 
+/* Extra Small Devices, Phones */
 @media only screen and (max-width : 767px) {
   .fb-navbar-right{
     margin-top: 0px;
