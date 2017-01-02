@@ -1,12 +1,31 @@
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 
 .fb-registration-header{
-  //background-color: red;
+  background: url('../images/bg_header_wine.jpg');
+}
+
+.fb-signup-header{
   font-family: 'Pacifico', cursive;
   font-size: 2em;
   text-align: center;
   color: pink;
-  vertical-align: middle;
-  margin-top: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
 
+
+
+@media only screen and (min-width : 768px) {
+  .fb-content{
+    position: relative;
+    top: 80px
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 767px) {
+  .fb-content{
+    position: relative;
+    top: 50px
+  }
 }

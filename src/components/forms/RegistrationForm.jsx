@@ -36,9 +36,11 @@ class RegistrationForm extends React.Component {
     const { dispatch, user } = this.props;
 
     return (
-      <div>
+      <div className='fb-content'>
         <div className='fb-registration-header'>
-          Signup
+          <div className='fb-signup-header'>
+            Signup
+          </div>
         </div>
         <Form model="user" onSubmit={() => this.handleSubmit()}>
           <div>

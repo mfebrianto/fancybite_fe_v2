@@ -52,6 +52,9 @@
 }
 
 .fb-navbar-wrapper {
+  position: absolute;
+  width: 100%;
+  z-index: 100;
   font-family: 'Advent Pro', sans-serif;
 
   .navbar-nav>li>a{
