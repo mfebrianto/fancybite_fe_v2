@@ -8,11 +8,18 @@
   font-family: 'Pacifico', cursive;
   font-size: 2em;
   text-align: center;
+  text-shadow: 2px 2px #fff;
   color: pink;
   padding-bottom: 20px;
   padding-top: 20px;
 }
 
+.fb-signup-form-wrapper{
+  margin: 2%;
+  padding: 2%;
+  border: solid 2px lightgray;
+  border-radius: 5px;
+}
 
 
 @media only screen and (min-width : 768px) {
