@@ -6,4 +6,20 @@ form{
   font-weight: bold;
   line-height: 1.5em;
   color: #7a7a7a;
+
+  span{
+    color: red;
+  }
+}
+
+input{
+  width: 90%;
+}
+
+label{
+  margin-top: 20px;
+}
+
+button{
+  margin-top: 20px;
 }

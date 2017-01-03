@@ -45,7 +45,7 @@ class RegistrationForm extends React.Component {
         <div className='fb-signup-form-wrapper'>
           <Form model="user" onSubmit={() => this.handleSubmit()}>
             <div>
-              <label>{ T.translate("registration.email") } * </label>
+              <label>{ T.translate("registration.email") } <span>*</span> </label>
               <Field model="user.email"
                      validators={{
                        required: (val) => val && val.length,
@@ -63,7 +63,7 @@ class RegistrationForm extends React.Component {
                     }}/>
 
             <div>
-              <label>{ T.translate("registration.password") } * </label>
+              <label>{ T.translate("registration.password") } <span>*</span> </label>
               <Field model="user.password"
                      validators={{
                        required: (val) => val && val.length,
@@ -81,7 +81,7 @@ class RegistrationForm extends React.Component {
                     }}/>
 
             <div>
-              <label>{ T.translate("registration.confirm_password") } * </label>
+              <label>{ T.translate("registration.confirm_password") } <span>*</span> </label>
               <Field model="user.passwordConfirmation"
                      validators={{
                        required: (val) => val && val.length,
