@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import { Button } from 'react-bootstrap';
+import { Button, Row, Grid, Col } from 'react-bootstrap';
 import { Control, Form, actions, Field, getField, Errors } from 'react-redux-form';
 import validator from 'validator';
 
@@ -42,67 +42,74 @@ class RegistrationForm extends React.Component {
             Signup
           </div>
         </div>
-        <div className='fb-signup-form-wrapper'>
-          <Form model="user" onSubmit={() => this.handleSubmit()}>
-            <div>
-              <label>{ T.translate("registration.email") } <span>*</span> </label>
-              <Field model="user.email"
-                     validators={{
-                       required: (val) => val && val.length,
-                       valid: validator.isEmail
-                     }}
-                     validateOn="blur">
-                <input type="email" />
-              </Field>
-            </div>
-            <Errors model="user.email"
-                    show={{ touched: true, focus: false }}
-                    messages={{
-                      required: 'Please provide an email address.',
-                      valid: (val) => `${val} is not a valid email.`,
-                    }}/>
 
-            <div>
-              <label>{ T.translate("registration.password") } <span>*</span> </label>
-              <Field model="user.password"
-                     validators={{
-                       required: (val) => val && val.length,
-                       passwordMatch: (val) => passwordMatch(val, user.passwordConfirmation)
-                     }}
-                     validateOn="blur">
-                <input type="password" />
-              </Field>
-            </div>
-            <Errors model="user.password"
-                    show={{ touched: true, focus: false }}
-                    messages={{
-                      required: 'Please put in your password.',
-                      passwordMatch: 'Must same with password confirmation'
-                    }}/>
+        <Grid>
+          <Row>
+            <Col xs={2} md={2}/>
+            <Col xs={8} md={8} className='fb-signup-form-wrapper'>
+              <Form model="user" onSubmit={() => this.handleSubmit()}>
+                <div>
+                  <label>{ T.translate("registration.email") } <span>*</span> </label>
+                  <Field model="user.email"
+                         validators={{
+                           required: (val) => val && val.length,
+                           valid: validator.isEmail
+                         }}
+                         validateOn="blur">
+                    <input type="email" />
+                  </Field>
+                </div>
+                <Errors model="user.email"
+                        show={{ touched: true, focus: false }}
+                        messages={{
+                          required: 'Please provide an email address.',
+                          valid: (val) => `${val} is not a valid email.`,
+                        }}/>
 
-            <div>
-              <label>{ T.translate("registration.confirm_password") } <span>*</span> </label>
-              <Field model="user.passwordConfirmation"
-                     validators={{
-                       required: (val) => val && val.length,
-                       passwordMatch: (val) => passwordMatch(user.password, val)
-                     }}
-                     validateOn="blur">
-                <input type="password" />
-              </Field>
-            </div>
-            <Errors model="user.passwordConfirmation"
-                    show={{ touched: true, focus: false }}
-                    messages={{
-                      required: 'Please confirm your password',
-                      passwordMatch: 'Must same with password'
-                    }}/>
+                <div>
+                  <label>{ T.translate("registration.password") } <span>*</span> </label>
+                  <Field model="user.password"
+                         validators={{
+                           required: (val) => val && val.length,
+                           passwordMatch: (val) => passwordMatch(val, user.passwordConfirmation)
+                         }}
+                         validateOn="blur">
+                    <input type="password" />
+                  </Field>
+                </div>
+                <Errors model="user.password"
+                        show={{ touched: true, focus: false }}
+                        messages={{
+                          required: 'Please put in your password.',
+                          passwordMatch: 'Must same with password confirmation'
+                        }}/>
 
-            <Button type="submit">
-              { T.translate("registration.submit") }
-            </Button>
-          </Form>
-        </div>
+                <div>
+                  <label>{ T.translate("registration.confirm_password") } <span>*</span> </label>
+                  <Field model="user.passwordConfirmation"
+                         validators={{
+                           required: (val) => val && val.length,
+                           passwordMatch: (val) => passwordMatch(user.password, val)
+                         }}
+                         validateOn="blur">
+                    <input type="password" />
+                  </Field>
+                </div>
+                <Errors model="user.passwordConfirmation"
+                        show={{ touched: true, focus: false }}
+                        messages={{
+                          required: 'Please confirm your password',
+                          passwordMatch: 'Must same with password'
+                        }}/>
+
+                <Button type="submit">
+                  { T.translate("registration.submit") }
+                </Button>
+              </Form>
+            </Col>
+            <Col xs={2} md={2}/>
+          </Row>
+        </Grid>
       </div>
     );
   }
