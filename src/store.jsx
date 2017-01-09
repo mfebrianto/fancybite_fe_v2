@@ -9,9 +9,14 @@ const initialUserState = {
   passwordConfirmation: ''
 };
 
+const components = {
+  overlay: false
+}
+
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(combineForms({
   user: initialUserState,
+  components: components
 }), composeEnhancers(applyMiddleware(thunk)));
 
 export default store;

@@ -21,13 +21,15 @@ const passwordMatch = (password, confirmation) => {
 class RegistrationForm extends React.Component {
 
   handleSubmit() {
-    let { user, dispatch } = this.props;
+    let { components, dispatch } = this.props;
 
     // const source = submitUser('http://localhost/api/auth');
     //
     // source.subscribe({next: x => console.log(x),
     //   error: error => console.error(error),
     //   complete: () => console.log('done')});
+
+    components.overlay = true;
 
     console.log("clicked");
   }
@@ -116,7 +118,7 @@ class RegistrationForm extends React.Component {
 }
 
 function mapStateToProps(state) {
-  return { user: state.user };
+  return { user: state.user, components: state.components };
 }
 
 export default connect(mapStateToProps)(RegistrationForm);
