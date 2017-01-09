@@ -9,7 +9,7 @@ class Loading extends React.Component {
     const { components } = this.props;
 
     return (
-      <div className="white-overlay" style={components.overlay ? {} : { display: 'none' }}/>
+      <div className="white-overlay" style={true ? {} : { display: 'none' }}/>
     );
   }
 }

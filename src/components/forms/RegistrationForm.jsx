@@ -6,6 +6,7 @@ import { Button, Row, Grid, Col } from 'react-bootstrap';
 import { Control, Form, actions, Field, getField, Errors } from 'react-redux-form';
 import validator from 'validator';
 
+import { setVisibilityFilter } from '../actions/index'
 // import { submitUser } from '../services/submitUser'
 
 import T from 'i18n-react';
@@ -21,7 +22,7 @@ const passwordMatch = (password, confirmation) => {
 class RegistrationForm extends React.Component {
 
   handleSubmit() {
-    let { components, dispatch } = this.props;
+    let { dispatch, user,  components } = this.props;
 
     // const source = submitUser('http://localhost/api/auth');
     //
@@ -29,13 +30,13 @@ class RegistrationForm extends React.Component {
     //   error: error => console.error(error),
     //   complete: () => console.log('done')});
 
-    components.overlay = true;
+    dispatch(setVisibilityFilter());
 
     console.log("clicked");
   }
 
   render() {
-    const { dispatch, user } = this.props;
+    const { dispatch, user,  components } = this.props;
 
     return (
       <div className='fb-content'>
