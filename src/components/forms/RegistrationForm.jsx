@@ -6,7 +6,7 @@ import { Button, Row, Grid, Col } from 'react-bootstrap';
 import { Control, Form, actions, Field, getField, Errors } from 'react-redux-form';
 import validator from 'validator';
 
-import { setVisibilityFilter } from '../actions/index'
+import { setVisibilityFilter, hideVisibility } from '../actions/index'
 // import { submitUser } from '../services/submitUser'
 
 import T from 'i18n-react';
@@ -32,6 +32,11 @@ class RegistrationForm extends React.Component {
 
 
     dispatch(setVisibilityFilter());
+
+
+    setTimeout(() => {
+      dispatch(hideVisibility())
+    }, 5000)
 
     console.log("clicked");
   }

@@ -3,3 +3,9 @@ export const setVisibilityFilter = () => {
     type: 'SHOW'
   }
 }
+
+export const hideVisibility = () => {
+  return {
+    type: 'HIDE'
+  }
+}
