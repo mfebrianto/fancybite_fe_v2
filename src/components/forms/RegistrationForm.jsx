@@ -30,6 +30,7 @@ class RegistrationForm extends React.Component {
     //   error: error => console.error(error),
     //   complete: () => console.log('done')});
 
+
     dispatch(setVisibilityFilter());
 
     console.log("clicked");

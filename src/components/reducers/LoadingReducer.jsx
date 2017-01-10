@@ -1,4 +1,4 @@
-const todo = (state = {}, action) => {
+const loading = (state = {}, action) => {
   switch (action.type) {
     case 'SHOW':
       return {
@@ -14,4 +14,4 @@ const todo = (state = {}, action) => {
   }
 }
 
-export default todo
+export default loading

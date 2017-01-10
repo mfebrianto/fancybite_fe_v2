@@ -9,13 +9,13 @@ class Loading extends React.Component {
     const { components } = this.props;
 
     return (
-      <div className="white-overlay" style={true ? {} : { display: 'none' }}/>
+      <div className="white-overlay" style={components.display ? {} : { display: 'none' }}/>
     );
   }
 }
 
 function mapStateToProps(state) {
-  return { components: state.components };
+  return { components: state.loadingOverlay };
 }
 
 export default connect(mapStateToProps)(Loading);
